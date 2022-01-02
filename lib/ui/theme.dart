@@ -17,6 +17,6 @@ class Themes{
 
   static final dark = ThemeData(
     primarySwatch: Colors.yellow,
-    brightness: Brightness.light
+    brightness: Brightness.dark
   );
 }

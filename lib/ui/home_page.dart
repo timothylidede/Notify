@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,7 +12,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: _appBar(),
       body: Column(
         children: const [
           Text("Theme Data",
@@ -23,6 +23,17 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
     );
+  }
 
+  _appBar(){
+    return AppBar(
+      leading: GestureDetector(
+        onTap:(){
+
+        },
+        child: Icon(Icons.nightlight_round,
+        size: 20,),
+      ),
+    );
   }
 }
