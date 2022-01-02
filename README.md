@@ -1,8 +1,13 @@
 # Notify
 
-Flutter App that orders a user's tasks for optimum productivity with local scheduled notifications
+Flutter App that orders a user's tasks for optimum productivity with local scheduled notifications. An advanced to-do list for both Android and IOS.
+
+# IDE
+
+* Android Studio
 
 # What I Learnt
+
 * flutter get storage package
 * flutter local notification package
 * flutter scheduled notification with zoned notification
