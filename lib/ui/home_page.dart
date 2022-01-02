@@ -31,9 +31,14 @@ class _HomePageState extends State<HomePage> {
         onTap:(){
 
         },
-        child: Icon(Icons.nightlight_round,
+        child: const Icon(Icons.nightlight_round,
         size: 20,),
       ),
+      actions: const [
+        Icon(Icons.person,
+          size: 20,),
+        SizedBox(width: 20,),
+      ],
     );
   }
 }
