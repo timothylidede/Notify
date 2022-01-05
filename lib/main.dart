@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notify/services/theme_services.dart';
 import 'package:notify/ui/home_page.dart';
 import 'package:notify/ui/theme.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: Themes.light,
       darkTheme: Themes.dark,
-      themeMode: ThemeMode.light,
+      themeMode: ThemeServices().theme,
 
       home: HomePage()
     );
