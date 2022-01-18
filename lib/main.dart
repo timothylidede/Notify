@@ -5,6 +5,7 @@ import 'package:notify/ui/home_page.dart';
 import 'package:notify/ui/theme.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await GetStorage.init();
   runApp(const MyApp());
 }
