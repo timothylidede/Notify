@@ -35,8 +35,11 @@ class _HomePageState extends State<HomePage> {
         size: 20,),
       ),
       actions: const [
-        Icon(Icons.person,
-          size: 20,),
+        CircleAvatar(
+          backgroundImage: AssetImage(
+            
+          ),
+        ),
         SizedBox(width: 20,),
       ],
     );
