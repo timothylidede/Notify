@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:notify/services/theme_services.dart';
 import 'package:notify/ui/home_page.dart';
 import 'package:notify/ui/theme.dart';
 
-void main() {
+Future<void> main() async {
+  await GetStorage.init();
   runApp(const MyApp());
 }
 
