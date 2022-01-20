@@ -1,3 +1,5 @@
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
 class NotifyHelper{
   FlutterLocalNotificationsPlugin
   flutterLocalNotificationsPlugin =
@@ -12,15 +14,10 @@ class NotifyHelper{
         requestAlertPermission: false,
         onDidReceiveLocalNotification: onDidReceiveLocalNotification
     );
-
-
-    final Android InitializationSettings initializationSettingsAndroid =
-        Android InitializationSettings("appicon);
-
-      final InitializationSettings initializationSettings =
-      InitializationSettings(
+    
+    final InitializationSettings initializationSettings =
+    InitializationSettings(
       iOS: initializationSettingsIOS,
-      android:initializationSettingsAndroid,
     );
     await flutterLocalNotificationsPlugin.initialize(
         initializationSettings,
