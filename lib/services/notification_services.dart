@@ -14,7 +14,15 @@ class NotifyHelper{
         requestAlertPermission: false,
         onDidReceiveLocalNotification: onDidReceiveLocalNotification
     );
-    
+
+    final AndroidInitializationSettings initializationSettingsIOSAndroid =
+    AndroidInitializationSettings(
+        requestSoundPermission: false,
+        requestBadgePermission: false,
+        requestAlertPermission: false,
+        onDidReceiveLocalNotification: onDidReceiveLocalNotification
+    );
+
     final InitializationSettings initializationSettings =
     InitializationSettings(
       iOS: initializationSettingsIOS,
