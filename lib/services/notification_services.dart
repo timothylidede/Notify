@@ -39,7 +39,7 @@ class NotifyHelper{
     } else {
       print("Notification Done");
     }
-    Get.to(()=>SecondScreen(payload));
+    Get.to(()=>Container(color: Colors.white,));
   }
 
   Future onDidReceiveLocalNotification(
