@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
+import 'package:notify/services/notification_services.dart';
 import 'package:notify/services/theme_services.dart';
 
 class HomePage extends StatefulWidget {
@@ -12,10 +13,13 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
 
+  var notifyHelper;
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
+    notifyHelper = NotifyHelper();
   }
 
   @override
