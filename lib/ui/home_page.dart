@@ -20,6 +20,7 @@ class _HomePageState extends State<HomePage> {
     // TODO: implement initState
     super.initState();
     notifyHelper = NotifyHelper();
+    notifyHelper.requestIOSPermissions();
   }
 
   @override
