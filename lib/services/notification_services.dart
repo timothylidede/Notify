@@ -33,6 +33,23 @@ class NotifyHelper{
 
   }
 
+  displayNotification({required String title, required String body}) async {
+    print("doing test");
+    var androidPlatformChannelSpecifics = new AndroidNotificationDetails(
+        'your channel id', 'your channel name', 'your channel description',
+        importance: Importance.max, priority: Priority.high);
+    var iOSPlatformChannelSpecifics = new IOSNotificationDetails();
+    var platformChannelSpecifics = new NotificationDetails(
+        android: androidPlatformChannelSpecifics, iOS: iOSPlatformChannelSpecifics);
+    await flutterLocalNotificationsPlugin.show(
+      0,
+      'You change your theme',
+      'You changed your theme back !',
+      platformChannelSpecifics,
+      payload: 'It could be anything you pass',
+    );
+  }
+
   void requestIOSPermissions() {
     flutterLocalNotificationsPlugin
         .resolvePlatformSpecificImplementation<
