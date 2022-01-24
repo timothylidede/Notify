@@ -33,6 +33,15 @@ class NotifyHelper{
 
   }
 
+  Future selectNotification(String payload) async {
+    if (payload != null) {
+      print('notification payload: $payload');
+    } else {
+      print("Notification Done");
+    }
+    Get.to(()=>SecondScreen(payload));
+  }
+
   Future onDidReceiveLocalNotification(
       int id, String? title, String? body, String? payload) async {
     // display a dialog with the notification details, tap ok to go to another page
