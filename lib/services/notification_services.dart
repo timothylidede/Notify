@@ -33,6 +33,17 @@ class NotifyHelper{
 
   }
 
+  void requestIOSPermissions() {
+    flutterLocalNotificationsPlugin
+        .resolvePlatformSpecificImplementation<
+        IOSFlutterLocalNotificationsPlugin>()
+        ?.requestPermissions(
+      alert: true,
+      badge: true,
+      sound: true,
+    );
+  }
+
   Future selectNotification(String? payload) async {
     if (payload != null) {
       print('notification payload: $payload');
