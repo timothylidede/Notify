@@ -33,7 +33,7 @@ class NotifyHelper{
 
   }
 
-  Future selectNotification(String payload) async {
+  Future selectNotification(String? payload) async {
     if (payload != null) {
       print('notification payload: $payload');
     } else {
